@@ -1,0 +1,13 @@
+<h1><%= @artist.name %> <h1>
+<br>
+<h3>Age: <%= @artist.age %> <h3>
+<br>
+<h3>Title: <%= @artist.title %> <h3>
+
+<p>Instrument/s: <% @artist.instruments.each do |i|%><p>
+   <%= i.name %>
+  <% end %>
+
+  <p><%= link_to "INDEX", artists_path %><p>
+  <p><%= link_to "ADD INSTRUMENT", new_artist_instrument_path %><p>
+
